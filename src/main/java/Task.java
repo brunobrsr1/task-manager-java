@@ -5,16 +5,55 @@ public class Task {
     private final String name;
     private final String description;
     private TaskStatus status;
-    private boolean priority;
+    private boolean isPriority;
     private LocalDate deadline;
 
-    public Task(int id, String name, String description, TaskStatus status, boolean priority, LocalDate deadline) {
+    // Constructor
+    public Task(int id, String name, String description, TaskStatus status, boolean isPriority, LocalDate deadline) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.status = status;
-        this.priority = priority;
+        this.isPriority = isPriority;
         this.deadline = deadline;
     }
 
+    // Getters
+    public int getId(){
+        return this.id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public TaskStatus getStatus() {
+        return this.status;
+    }
+
+    public boolean isPriority() {
+        return this.isPriority;
+    }
+
+    public LocalDate getDeadline() {
+        return this.deadline;
+    }
+
+
+    // Setters
+    public void setStatus(TaskStatus status) {
+        this.status = status;
+    }
+
+    public void setPriority(boolean isPriority) {
+        this.isPriority = isPriority;
+    }
+
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
+    }
 }
