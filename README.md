@@ -16,10 +16,6 @@ This project is meant to be a foundation for a future evolution into a **Spring 
 
 ## 🛠️ Technologies Used
 - **Java 17+**  
-- **Maven** (or Gradle, depending on setup)  
+- **Maven**
 - (future) **SQLite / H2** for persistence  
 - (future) **JUnit** for testing  
-
----
-
-## 📂 Project Structure
