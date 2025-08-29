@@ -1,4 +1,4 @@
-# 📌 Task Manager (Java)
+# Task Manager (Java)
 
 A simple **Task Manager** built with **Java**, designed to practice core concepts of object-oriented programming, project structure, and clean code principles.  
 
@@ -6,7 +6,7 @@ This project is meant to be a foundation for a future evolution into a **Spring 
 
 ---
 
-## 🚀 Features
+## Features
 - Create, list, update, and delete tasks  
 - Assign status to tasks (pending, in progress, completed)  
 - Set task priority  
@@ -14,7 +14,7 @@ This project is meant to be a foundation for a future evolution into a **Spring 
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 - **Java 17+**  
 - **Maven**
 - (future) **SQLite / H2** for persistence  
