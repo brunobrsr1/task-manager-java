@@ -3,8 +3,8 @@ import java.time.LocalDate;
 public class PriorityTask extends Task{
     private Priority priority;
 
-    public PriorityTask(int id, String name, String description, TaskStatus status, LocalDate deadline, Priority priority) {
-        super(id, name, description, status, deadline);
+    public PriorityTask(int id, String name, TaskStatus status, LocalDate deadline, Priority priority) {
+        super(id, name, status, deadline);
         this.priority = priority;
     }
 
