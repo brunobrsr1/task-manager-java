@@ -43,7 +43,6 @@ public class Task {
         return this.deadline;
     }
 
-
     // Setters
     public void setStatus(TaskStatus status) {
         this.status = status;
@@ -57,5 +56,8 @@ public class Task {
         this.deadline = deadline;
     }
 
-
+    @Override
+    public String toString() {
+        return "Task ID: " + this.id + " Name: " + this.name + " Description: " + this.description + " Status: " + this.status + " Priority: " + this.isPriority + " Deadline: " + this.deadline;
+    }
 }
