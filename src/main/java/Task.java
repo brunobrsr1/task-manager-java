@@ -5,16 +5,14 @@ public class Task {
     private final String name;
     private final String description;
     private TaskStatus status;
-    private boolean isPriority;
     private LocalDate deadline;
 
     // Constructor
-    public Task(int id, String name, String description, TaskStatus status, boolean isPriority, LocalDate deadline) {
+    public Task(int id, String name, String description, TaskStatus status, LocalDate deadline) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.status = status;
-        this.isPriority = isPriority;
         this.deadline = deadline;
     }
 
@@ -35,10 +33,6 @@ public class Task {
         return this.status;
     }
 
-    public boolean isPriority() {
-        return this.isPriority;
-    }
-
     public LocalDate getDeadline() {
         return this.deadline;
     }
@@ -48,16 +42,12 @@ public class Task {
         this.status = status;
     }
 
-    public void setPriority(boolean isPriority) {
-        this.isPriority = isPriority;
-    }
-
     public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
     }
 
     @Override
     public String toString() {
-        return "Task ID: " + this.id + " Name: " + this.name + " Description: " + this.description + " Status: " + this.status + " Priority: " + this.isPriority + " Deadline: " + this.deadline;
+        return "Task ID: " + this.id + " Name: " + this.name + " Description: " + this.description + " Status: " + this.status + " Deadline: " + this.deadline;
     }
 }
