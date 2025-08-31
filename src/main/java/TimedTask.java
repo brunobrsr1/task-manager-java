@@ -4,8 +4,8 @@ public class TimedTask extends Task {
     private int duration;
 
     // Constructor
-    public TimedTask(int id, String name, TaskStatus status, LocalDate deadline, int duration) {
-        super(id, name, status, deadline);
+    public TimedTask(String name, TaskStatus status, LocalDate deadline, int duration) {
+        super(name, status, deadline);
         this.duration = duration;
     }
 
