@@ -1,23 +1,19 @@
-import java.time.LocalDate;
-
 public class PriorityTask extends Task{
     private Priority priority;
 
-    public PriorityTask(String name, TaskStatus status, LocalDate deadline, Priority priority) {
-        super(name, status, deadline);
+    // Constructor
+    public PriorityTask(String name, Priority priority) {
+        super(name);
         this.priority = priority;
     }
 
-    public Priority getPriority() {
-        return priority;
-    }
+    // Getter & Setter
+    public Priority getPriority() { return priority; }
 
-    public void setPriority(Priority priority) {
-        this.priority = priority;
-    }
+    public void setPriority(Priority priority) { this.priority = priority; }
 
     @Override
-    public String toString() {
-        return super.toString() + " priority: " + this.priority;
+    public void show() {
+        System.out.println("Task: " + getName() + " [" + getStatus() + "]: " + getPriority());
     }
 }

@@ -1,26 +1,24 @@
-import java.time.LocalDate;
-
-public class TimedTask extends Task {
+public class TimedTask extends Task implements Notifiable {
     private int duration;
 
     // Constructor
-    public TimedTask(String name, TaskStatus status, LocalDate deadline, int duration) {
-        super(name, status, deadline);
+    public TimedTask(String name, int duration) {
+        super(name);
         this.duration = duration;
     }
 
-    // Getter
-    public int getDuration() {
-        return duration;
-    }
+    // Getter and Setter
+    public int getDuration() { return duration; }
 
-    // Setter
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setDuration(int duration) { this.duration = duration; }
+
+    @Override
+    public void notifyUser() {
+        System.out.println("Reminder: " + getName() + " is due in " + getDuration() + " minutes!");
     }
 
     @Override
-    public String toString() {
-        return super.toString() + " duration: " + this.duration;
+    public void show() {
+        System.out.println("Task: " + getName() + " [" + getStatus() + "] (Timed " + getDuration() + "mins)");
     }
 }

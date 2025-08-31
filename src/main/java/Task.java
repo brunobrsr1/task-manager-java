@@ -1,58 +1,34 @@
-import java.time.LocalDate;
 
-public class Task implements Notifiable{
+public abstract class Task {
     private static int idCounter = 0;
     private final int id;
-    private final String name;
+    private String name;
     private TaskStatus status;
-    private LocalDate deadline;
 
     // Constructor
-    public Task(String name, TaskStatus status, LocalDate deadline) {
+    public Task(String name) {
         this.id = idCounter++;
         this.name = name;
-        this.status = status;
-        this.deadline = deadline;
-    }
-
-    public Task(String name, LocalDate deadline) {
-        this.id = idCounter++;
-        this.name = name;
-        this.deadline = deadline;
+        this.status = TaskStatus.PENDING;
     }
 
     // Getters
-    public int getId(){
-        return this.id;
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public TaskStatus getStatus() { return status; }
+
+
+    public void complete() {
+        this.status = TaskStatus.COMPLETED;
     }
 
-    public String getName() {
-        return this.name;
+    public void cancel() {
+        this.status = TaskStatus.CANCELLED;
     }
 
-    public TaskStatus getStatus() {
-        return this.status;
+    public void start() {
+        this.status = TaskStatus.IN_PROGRESS;
     }
 
-    public LocalDate getDeadline() {
-        return this.deadline;
-    }
-
-    // Setters
-    public void setStatus(TaskStatus status) {
-        this.status = status;
-    }
-
-    public void setDeadline(LocalDate deadline) {
-        this.deadline = deadline;
-    }
-
-    public void notifyUser() {
-        System.out.println("Reminder: Task: " +this.name + "  is due at " + this.deadline);
-    }
-
-    @Override
-    public String toString() {
-        return "Task ID: " + this.id + " Name: " + this.name + " Status: " + this.status + " Deadline: " + this.deadline;
-    }
+    public abstract void show();
 }
