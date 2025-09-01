@@ -17,5 +17,10 @@ public class Main {
         task2.notifyUser();
         task2.setDuration(30);
         task2.notifyUser();
+
+        TimedTask task3 = new TimedTask("Fazer exercícios", 60);
+        task3.show();
+        task3.start();
+
     }
 }
