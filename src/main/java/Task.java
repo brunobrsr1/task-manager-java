@@ -8,7 +8,7 @@ public abstract class Task {
     // Constructor
     public Task(String name) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("Task name cannot be empty");
+            throw new InvalidTaskException("Task name cannot be empty");
         }
         this.id = idCounter++;
         this.name = name;
