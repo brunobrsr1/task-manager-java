@@ -22,5 +22,10 @@ public class Main {
         task3.show();
         task3.start();
 
+        try {
+            Task task = new PriorityTask("", Priority.HIGH);
+        } catch (InvalidTaskException e) {
+            System.out.println("Failed to create task: " + e.getMessage());
+        }
     }
 }
